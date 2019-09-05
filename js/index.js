@@ -42,9 +42,21 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-let navLinks = document.querySelectorAll('nav a');
-// console.log(navLinks);
-// navLinks.textContent('src', siteContent["nav"]["nav-item-1"]); 
+let navLinks = document.querySelectorAll('a');
+
+console.log(siteContent.nav['nav-item-1']);
+console.log(navLinks[0]);
+
+navLinks[0].append(siteContent.nav['nav-item-1']);
+navLinks[1].append(siteContent.nav['nav-item-2']);
+navLinks[2].append(siteContent.nav['nav-item-3']);
+navLinks[3].append(siteContent.nav['nav-item-4']);
+navLinks[4].append(siteContent.nav['nav-item-5']);
+navLinks[5].append(siteContent.nav['nav-item-6']);
+// navLinks.forEach((links) => {
+//   links.textContent = siteContent['nav']['nav-item-1']
+// });
+
 //todo figure this out...get nav links to display.
 
 //cta
@@ -66,10 +78,16 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 //contact
+let contactHead = document.querySelector('contact h4');
+
+// contactHead.textContent = siteContent['contact']['contact-h4'];
+
 const contactParas = document.querySelectorAll('.contact p');
 
 
 //footer
 
 const footerText = document.querySelector('footer p');
+
+footerText.setAttribute('p', siteContent['footer']['copyright']);
 
