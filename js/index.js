@@ -58,11 +58,9 @@ const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let ctaText = document.querySelector('h1');
-//ctaText.append(siteContent.cta['h1']);
 ctaText.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('button');
-//ctaButton.append(siteContent.cta['button']);
 ctaButton.textContent = siteContent.cta.button
 //main content
 
@@ -86,8 +84,6 @@ mainParagraphs[3].textContent = siteContent['main-content']['product-content'];
 headers[4].textContent = siteContent['main-content']['vision-h4'];
 mainParagraphs[4].textContent = siteContent['main-content']['vision-content'];
 
-/////TODO Keep adding elements change individual header titles
-
 
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
@@ -96,12 +92,15 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 //contact
 headers[5].textContent = siteContent['contact']['contact-h4'];
 
-const contactParas = document.querySelectorAll('.contact p');
-
+let contactParas = document.querySelectorAll('p');
+contactParas[5].textContent = siteContent['contact']['address'];
+contactParas[6].textContent = siteContent['contact']['phone'];
+contactParas[7].textContent = siteContent['contact']['email'];
 
 //footer
 
-const footerText = document.querySelector('footer p');
+let footerText = document.querySelectorAll('p');
 
-footerText.setAttribute('p', siteContent['footer']['copyright']);
+footerText[8].textContent = siteContent['footer']['copyright'];
 
+//? Fix specificity of paragraphs? Is there a way to specify which class or section it's drawing from so I can use [0] to start every time?
