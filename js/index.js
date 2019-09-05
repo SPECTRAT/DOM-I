@@ -44,33 +44,38 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 
 let navLinks = document.querySelectorAll('a');
 
-console.log(siteContent.nav['nav-item-1']);
-console.log(navLinks[0]);
-
 navLinks[0].append(siteContent.nav['nav-item-1']);
 navLinks[1].append(siteContent.nav['nav-item-2']);
 navLinks[2].append(siteContent.nav['nav-item-3']);
 navLinks[3].append(siteContent.nav['nav-item-4']);
 navLinks[4].append(siteContent.nav['nav-item-5']);
 navLinks[5].append(siteContent.nav['nav-item-6']);
-// navLinks.forEach((links) => {
-//   links.textContent = siteContent['nav']['nav-item-1']
-// });
 
-//todo figure this out...get nav links to display.
+//? figure this out...can I do this with a for loop? Or forEach?.
 
 //cta
 const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
-const ctaText = document.querySelector('h1');
+let ctaText = document.querySelector('h1');
+ctaText.append(siteContent.cta['h1']);
 
-const ctaButton = document.querySelector('button');
-
+let ctaButton = document.querySelector('button');
+ctaButton.append(siteContent.cta['button']);
 //main content
 
 
-const mainHeaders = document.querySelectorAll('h4');
+let headers = document.querySelectorAll('h4');
+
+headers[0].textContent = siteContent['main-content']['features-h4'];
+headers[1].textContent = siteContent['main-content']['features-h4'];
+headers[2].textContent = siteContent['main-content']['features-h4'];
+headers[3].textContent = siteContent['main-content']['features-h4'];
+headers[4].textContent = siteContent['main-content']['features-h4'];
+headers[5].textContent = siteContent['main-content']['features-h4'];
+
+//TODO Keep adding elements change individual header titles
+
 const textContent = document.getElementsByClassName('.text-content');
 
 const middleImg = document.getElementById('middle-img');
