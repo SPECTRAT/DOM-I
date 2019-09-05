@@ -58,34 +58,43 @@ const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let ctaText = document.querySelector('h1');
-ctaText.append(siteContent.cta['h1']);
+//ctaText.append(siteContent.cta['h1']);
+ctaText.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('button');
-ctaButton.append(siteContent.cta['button']);
+//ctaButton.append(siteContent.cta['button']);
+ctaButton.textContent = siteContent.cta.button
 //main content
 
 
+let textContent = document.getElementsByClassName('text-content');
 let headers = document.querySelectorAll('h4');
+let mainParagraphs = document.querySelectorAll('p');
 
 headers[0].textContent = siteContent['main-content']['features-h4'];
-headers[1].textContent = siteContent['main-content']['features-h4'];
-headers[2].textContent = siteContent['main-content']['features-h4'];
-headers[3].textContent = siteContent['main-content']['features-h4'];
-headers[4].textContent = siteContent['main-content']['features-h4'];
-headers[5].textContent = siteContent['main-content']['features-h4'];
+mainParagraphs[0].textContent = siteContent['main-content']['features-content'];
 
-//TODO Keep adding elements change individual header titles
+headers[1].textContent = siteContent['main-content']['about-h4'];
+mainParagraphs[1].textContent = siteContent['main-content']['about-content'];
 
-const textContent = document.getElementsByClassName('.text-content');
+headers[2].textContent = siteContent['main-content']['services-h4'];
+mainParagraphs[2].textContent = siteContent['main-content']['services-content'];
+
+headers[3].textContent = siteContent['main-content']['product-h4'];
+mainParagraphs[3].textContent = siteContent['main-content']['product-content'];
+
+headers[4].textContent = siteContent['main-content']['vision-h4'];
+mainParagraphs[4].textContent = siteContent['main-content']['vision-content'];
+
+/////TODO Keep adding elements change individual header titles
+
 
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
 //contact
-let contactHead = document.querySelector('contact h4');
-
-// contactHead.textContent = siteContent['contact']['contact-h4'];
+headers[5].textContent = siteContent['contact']['contact-h4'];
 
 const contactParas = document.querySelectorAll('.contact p');
 
