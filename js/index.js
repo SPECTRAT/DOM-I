@@ -39,30 +39,37 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 //navigation
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
 
-// let navLinks = document.querySelectorAll("nav a");
+let navLinks = document.querySelectorAll('nav a');
 // console.log(navLinks);
 // navLinks.textContent('src', siteContent["nav"]["nav-item-1"]); 
 //todo figure this out...get nav links to display.
 
 //cta
-let topImg = document.getElementById('cta-img');
+const topImg = document.getElementById('cta-img');
 topImg.setAttribute('src', siteContent['cta']['img-src']);
 
-let ctaText = document.getElementsByClassName('cta-text');
+const ctaText = document.querySelector('h1');
+
+const ctaButton = document.querySelector('button');
 
 //main content
-//top-main
 
-//middle-main
-let middleImg = document.getElementById('middle-img');
+
+const mainHeaders = document.querySelectorAll('h4');
+const textContent = document.getElementsByClassName('.text-content');
+
+const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-//bottom-main
 
 
 //contact
+const contactParas = document.querySelectorAll('.contact p');
+
 
 //footer
+
+const footerText = document.querySelector('footer p');
+
