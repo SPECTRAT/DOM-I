@@ -52,6 +52,11 @@ navLinks[4].append(siteContent.nav['nav-item-5']);
 navLinks[5].append(siteContent.nav['nav-item-6']);
 
 //? figure this out...can I do this with a for loop? Or forEach?.
+navLinks.forEach((links) => {
+  links.style.color = 'green';
+})
+//TODO use createElement to make and thend the append and prepend to add items to the nav
+
 
 //cta
 const topImg = document.getElementById('cta-img');
@@ -59,6 +64,8 @@ topImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent.cta.h1;
+//ctaText.style.whiteSpace = "wrap";
+
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent.cta.button
