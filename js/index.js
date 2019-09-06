@@ -61,13 +61,15 @@ navLinks.forEach((links) => {
 const newNavLink = document.createElement('a');
 newNavLink.setAttribute('href', '#');
 //checks out
-newNavLink.textContent = "New Link!";
+newNavLink.textContent = `New Link!`;
+newNavLink.style.color = 'green';
 console.log(newNavLink);
 
 const newNavLink2 = document.createElement('a');
 newNavLink2.setAttribute('href', '#');
 newNavLink2.setAttribute('href', '#');
-newNavLink2.textContent = "Another Link!";
+newNavLink2.textContent = `Another Link!`;
+newNavLink2.style.color = 'green';
 console.log(newNavLink2);
 
 const nav = document.querySelector('nav');
@@ -87,6 +89,8 @@ ctaText.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent.cta.button
+
+ctaButton.style.borderRadius = '6px';
 
 //main content
 
