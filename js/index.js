@@ -38,5 +38,99 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+//navigation
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+let navLinks = document.querySelectorAll('a');
+
+navLinks[0].append(siteContent.nav['nav-item-1']);
+navLinks[1].append(siteContent.nav['nav-item-2']);
+navLinks[2].append(siteContent.nav['nav-item-3']);
+navLinks[3].append(siteContent.nav['nav-item-4']);
+navLinks[4].append(siteContent.nav['nav-item-5']);
+navLinks[5].append(siteContent.nav['nav-item-6']);
+
+//? figure this out...can I do this with a for loop? Or forEach?.
+//turn nav links green
+navLinks.forEach((links) => {
+  links.style.color = 'green';
+})
+//TODO use createElement to make and thend the append and prepend to add items to the nav
+
+const newNavLink = document.createElement('a');
+newNavLink.setAttribute('href', '#');
+//checks out
+newNavLink.textContent = `New Link!`;
+newNavLink.style.color = 'green';
+console.log(newNavLink);
+
+const newNavLink2 = document.createElement('a');
+newNavLink2.setAttribute('href', '#');
+newNavLink2.setAttribute('href', '#');
+newNavLink2.textContent = `Another Link!`;
+newNavLink2.style.color = 'green';
+console.log(newNavLink2);
+
+const nav = document.querySelector('nav');
+console.log(nav);
+
+nav.prepend(newNavLink);
+nav.appendChild(newNavLink2);
+//note: nodelist vs htmlcollection...node list append worked! 
+
+
+//cta
+const topImg = document.getElementById('cta-img');
+topImg.setAttribute('src', siteContent['cta']['img-src']);
+
+let ctaText = document.querySelector('h1');
+ctaText.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button
+
+ctaButton.style.borderRadius = '6px';
+
+//main content
+
+
+let textContent = document.getElementsByClassName('text-content');
+let headers = document.querySelectorAll('h4');
+let mainParagraphs = document.querySelectorAll('p');
+
+headers[0].textContent = siteContent['main-content']['features-h4'];
+mainParagraphs[0].textContent = siteContent['main-content']['features-content'];
+
+headers[1].textContent = siteContent['main-content']['about-h4'];
+mainParagraphs[1].textContent = siteContent['main-content']['about-content'];
+
+headers[2].textContent = siteContent['main-content']['services-h4'];
+mainParagraphs[2].textContent = siteContent['main-content']['services-content'];
+
+headers[3].textContent = siteContent['main-content']['product-h4'];
+mainParagraphs[3].textContent = siteContent['main-content']['product-content'];
+
+headers[4].textContent = siteContent['main-content']['vision-h4'];
+mainParagraphs[4].textContent = siteContent['main-content']['vision-content'];
+
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//contact
+headers[5].textContent = siteContent['contact']['contact-h4'];
+
+let contactParas = document.querySelectorAll('p');
+contactParas[5].textContent = siteContent['contact']['address'];
+contactParas[6].textContent = siteContent['contact']['phone'];
+contactParas[7].textContent = siteContent['contact']['email'];
+
+//footer
+
+let footerText = document.querySelectorAll('p');
+
+footerText[8].textContent = siteContent['footer']['copyright'];
+
+//? Fix specificity of paragraphs? Is there a way to specify which class or section it's drawing from so I can use [0] to start every time?
